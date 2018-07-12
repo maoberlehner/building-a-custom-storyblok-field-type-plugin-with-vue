@@ -21,7 +21,7 @@
   "devDependencies": {
     "@avalanche/eslint-config": "^2.0.0",
     "@avalanche/stylelint-config": "^0.1.2",
-    "babel-eslint": "^8.2.5",
+    "babel-eslint": "^8.2.6",
     "eslint": "^5.1.0",
     "eslint-plugin-import": "^2.13.0",
     "eslint-plugin-vue": "^4.5.0",
