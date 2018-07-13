@@ -14,7 +14,9 @@
       </p>
       <img
         v-if="image"
-        :src="image" alt=""
+        :src="$img(image, 200, 0, { format: `webp` })"
+        :srcset="`${$img(image, 400, 0, { format: `webp` })} 2x`"
+        alt=""
       >
     </div>
   </div>

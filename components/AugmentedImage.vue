@@ -1,6 +1,10 @@
 <template>
   <div :class="$options.name">
-    <img src="image" alt="">
+    <img
+      :src="$img(image, 800, 0, { format: `webp` })"
+      :srcset="`${$img(image, 1600, 0, { format: `webp` })} 2x`"
+      alt=""
+    >
     <augmented-image-detail
       v-for="(detail, index) in details"
       :key="index"
