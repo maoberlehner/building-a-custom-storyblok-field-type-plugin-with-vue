@@ -11,11 +11,16 @@ export default {
 </script>
 
 <style>
+body {
+  margin: 0;
+  padding: 1em;
+  background-color: #000;
+  font-family: sans-serif;
+}
+
 .LayoutDefault__main {
   margin-right: auto;
   margin-left: auto;
-  padding-right: 1em;
-  padding-left: 1em;
   max-width: 52em;
 }
 </style>
