@@ -43,8 +43,8 @@
       </p>
       <img
         v-if="image"
-        :src="$img(image, 200, 0, { format: `webp` })"
-        :srcset="`${$img(image, 400, 0, { format: `webp` })} 2x`"
+        :src="$img(image, 200)"
+        :srcset="`${$img(image, 400)} 2x`"
         alt=""
       >
     </div>

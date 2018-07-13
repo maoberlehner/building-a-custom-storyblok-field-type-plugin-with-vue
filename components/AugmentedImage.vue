@@ -1,8 +1,8 @@
 <template>
   <div :class="$options.name">
     <img
-      :src="$img(image, 800, 0, { format: `webp` })"
-      :srcset="`${$img(image, 1600, 0, { format: `webp` })} 2x`"
+      :src="$img(image, 800)"
+      :srcset="`${$img(image, 1600)} 2x`"
       alt=""
     >
     <augmented-image-detail
