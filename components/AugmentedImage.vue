@@ -33,3 +33,9 @@ export default {
   },
 };
 </script>
+
+<style>
+.AugmentedImage {
+  position: relative;
+}
+</style>

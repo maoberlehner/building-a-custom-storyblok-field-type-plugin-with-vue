@@ -18,6 +18,12 @@ body {
   font-family: sans-serif;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
 .LayoutDefault__main {
   margin-right: auto;
   margin-left: auto;
