@@ -3,7 +3,7 @@
     <augmented-image
       v-for="augmentedImage in augmentedImages"
       :key="augmentedImage._uid"
-      :details="augmentedImage.image.augmentations"
+      :details="augmentedImage.image.details"
       :image="augmentedImage.image.image"
     />
   </div>
