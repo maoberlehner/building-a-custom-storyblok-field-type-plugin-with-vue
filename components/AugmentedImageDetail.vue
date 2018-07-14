@@ -31,23 +31,25 @@
         />
       </svg>
     </button>
-    <div
-      v-show="open"
-      :class="`${$options.name}__content`"
-    >
-      <h3 v-if="title">
-        {{ title }}
-      </h3>
-      <p v-if="text">
-        {{ text }}
-      </p>
-      <img
-        v-if="image"
-        :src="$img(image, 200)"
-        :srcset="`${$img(image, 400)} 2x`"
-        alt=""
+    <transition name="fade">
+      <div
+        v-show="open"
+        :class="`${$options.name}__content`"
       >
-    </div>
+        <h3 v-if="title">
+          {{ title }}
+        </h3>
+        <p v-if="text">
+          {{ text }}
+        </p>
+        <img
+          v-if="image"
+          :src="$img(image, 200)"
+          :srcset="`${$img(image, 400)} 2x`"
+          alt=""
+        >
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -115,10 +117,10 @@ export default {
 
 .AugmentedImageDetail__content {
   position: relative;
-  width: 12.5em;
   margin-top: 1em;
   margin-left: -6.25em;
   padding: 1em;
+  width: 12.5em;
   background-color: rgba(255, 255, 255, 0.9);
 }
 
@@ -141,5 +143,28 @@ export default {
 .AugmentedImageDetail__content p:not(:first-child),
 .AugmentedImageDetail__content img:not(:first-child) {
   margin-top: 1em;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  animation-name: fadeIn;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+.fade-leave-active {
+  animation-direction: reverse;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 10%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 </style>
