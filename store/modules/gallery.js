@@ -4,24 +4,6 @@ import api from '../../utils/api';
 
 export const HOME = `home`;
 
-// function adaptAugmentedImage({
-//   image,
-//   link,
-//   text,
-//   title,
-//   _uid,
-// }) {
-//   return {
-//     id: _uid,
-//     image: {
-//       url: image,
-//     },
-//     link: link.url,
-//     text,
-//     title,
-//   };
-// }
-
 export default {
   namespaced: true,
   actions: {
